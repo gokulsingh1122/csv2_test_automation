@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.UnPublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done Testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.FilterProductBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.FilterProductWithStatus"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByMuid"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByProductName"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByCompany"/>
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.UnPublished1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!-- Done testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByPanelistId"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByNotOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.HideAndShowAdvanceFilter"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchProductByCountry"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.SearchByMultipleCombination"/>
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.UnPublished2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done testing -->
+        <classes>
+           <!-- <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.CopyToClipboardSingleProduct"/>-->
+            <!--<class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.CopyToClipboardMultipleProduct"/>--><!--Needs debugging also we can implement this type of tests for all grids  -->
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.Published" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done testing   -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.FilterBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.FilterByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.FilterByUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByProductName"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByEntryId"/>
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.Published1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!-- Done testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByMuid"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByPanelistId"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByNotOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByCountry"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.ShowAndHideAdvanceFilter"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.SearchByMultipleCombination"/>
+        </classes>
+    </test>
+
+
+
+    <test name="Tests.AdminSite.ElectronicContent.Published2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!-- Done Testing -->
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.electronic_content.published.CopyToClipboardSingleProduct"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.CopyToClipboardMultipleProduct"/>--><!--Will find another way to cover this-->
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.PaginationSorting" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done Testing -->
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.electronic_content.pagination_sorting.SortingUnpublished"/>--> <!--Sorting is not Working on Status Header -->
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.pagination_sorting.PaginationUnpublished"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.electronic_content.pagination_sorting.SortingPublished"/>--> <!-- Sorting is not working -->
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.pagination_sorting.PaginationPublished"/>
+        </classes>
+    </test>
+</suite>

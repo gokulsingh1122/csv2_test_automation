@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="classes" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_SearchManagement_Test">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.affinity_associations.AffinitySearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.audiences.AudiencesSearchManagement"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.companies.CompaniesSearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.merge_companies.MergeCompanies"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.companies.UpdateCompanyImage"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.mailing_type.MailingTypeSearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.media_channels.MediaChannelsSearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.publications.PublicationsSearchMngmnt"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.search_managment.sector_management.SectorManagement"/>--><!--need to discuss about redis cache-->
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.states_provinces.StatesProvinces"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.communication_type.CommunicationTypeSearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.section_management.SectionManagement"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.approve_company.ApproveCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.approve_company.SenderDomainSpecialCharacters"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.merge_affinities.MergeAffinities"/>
+        </classes>
+    </test>
+</suite>

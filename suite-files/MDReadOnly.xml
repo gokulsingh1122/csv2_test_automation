@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.AdminSite.MobileDigital.SearchFilter.Unpublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--tested-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByStatus"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchMediaChannel"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByPanelistId"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByProductName"/>
+        </classes>
+    </test>
+    <test name="Tests.AdminSite.MobileDigital.SearchFilter.Unpublished2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--tested-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.FilterByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByOCRNotText"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.SearchProductByCountry"/>
+            <!-- <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.search_filter.CopyToClipboardSingleProduct"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.MobileDigital.SearchFilter.Published" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--tested-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.FilterBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchMediaChannel"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByPanelistId"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByProductName"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.MobileDigital.SearchFilter.Published2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--tested-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.FilterByUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.FilterByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByOCRNotText"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.search_filter.SearchProductByCountry"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.MobileDigital.SearchFilter.PrefilterProduct" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.search_filter.SearchByOnlineDisplay"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.search_filter.SearchByOnlineVideo"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.search_filter.SearchBySearchEngineMarketing"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.search_filter.SearchByPanelistID"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.MobileDigital.PublishedAndUnpublished.PaginationAndSorting" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--tested-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.pagination_sorting.PaginationUnpublishedGrid"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.pagination_sorting.PaginationPublishedGrid"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.mobile_digital.pagination_sorting.SortingUnpublishedGrid"/>--><!--Bug, Status sorting fails-->
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.pagination_sorting.SortingPublishedGrid"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.mobile_digital.pagination_sorting.PaginationPrefilterProduct"/> --><!--No Records on Prefilter-->
+        </classes>
+    </test>
+
+</suite>

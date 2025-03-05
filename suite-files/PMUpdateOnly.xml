@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="2">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.AdminSite.PrintMedia.UnPublished.BulkUpdate" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done Testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.CreateMultipleTestProductPM"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.bulk_update.BulkUpdateSingleRecord"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.bulk_update.BulkUpdateMultipleSector"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.bulk_update.BulkUpdateMultipleCompanies"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.bulk_update.BulkUpdateAddDuplicateCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.bulk_update.BulkUpdateAddDuplicateSector"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.bulk_update.BulkUpdateMultipleRecords"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.DeletePMMultipleProduct"/>
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.PrintMedia.UnPublished.StatueChange" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done Testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.status_change.StatusChangePM"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.status_change.StatusToApproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.DeleteSingleProduct"/>
+
+
+            <!--<class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.status_change.StatusToUnapproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.status_change.StatusToReprocessed"/>-->
+            <!--<class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.status_change.StatusFtpToTemp"/>-->
+        </classes>
+    </test>
+
+</suite>

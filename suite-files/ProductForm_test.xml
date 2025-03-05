@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="classes" thread-count="1">
+
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.ContentSite.ProductForm" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="testtag" value="1"></parameter>
+        <classes>
+           <class name="com.competi.scan.test.tests.content_site.product_form.smokeTest"/>
+            <!--  <class name="com.competi.scan.test.tests.content_site.product_form.verifyAncillaryProducts"/>
+             <class name="com.competi.scan.test.tests.content_site.product_form.verifyAffinitySection"/>
+             <class name="com.competi.scan.test.tests.content_site.product_form.verifyAudienceSection"/>
+             <class name="com.competi.scan.test.tests.content_site.product_form.verifyBusinessContent"/>
+             <class name="com.competi.scan.test.tests.content_site.product_form.verifyCampaignLanguage"/>-->
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyCompanySection"/>
+            <!--<class name="com.competi.scan.test.tests.content_site.product_form.verifyMailingType"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyMediaChannelSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyOfferOrigin"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyPanelistSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyPreLoadedData"/>-->
+
+
+        </classes>
+    </test>
+
+
+</suite>

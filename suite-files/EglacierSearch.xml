@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_Smoke_Test" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.default_search.EGlacierDefaultSearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.clear_search.EGlacierClearSearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.id_search.EGlacierIdSearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test3" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.subject_search.EGlacierSubjectSearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test4" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.body_search.EGlacierBodySearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test5" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.sender_name_search.EGlacierSenderNameSearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test6" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.sender_email_search.EGlacierSenderEmailSearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test7" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.subject_body_search.EGlacierSubjectWithBodySearch">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test8" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.MoveToEGlacierAndBackToFocus">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test9" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.MoveFromFocusToEGlacierMultipleRecords">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test10" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.FocusDashboardToEGlacier">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test11" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.id_search.EGlacierMultipleIdSearch">
+            </class>
+        </classes>
+    </test>
+</suite>

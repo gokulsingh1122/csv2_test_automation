@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Admin Site" configfailurepolicy="continue" parallel="instances" thread-count="2" group-by-instances="true">
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <suite-files>
+
+        <suite-file path="DMReadOnly.xml"></suite-file>
+        <suite-file path="ECReadOnly.xml"></suite-file>
+        <suite-file path="PMReadOnly.xml"></suite-file>
+        <suite-file path="SMReadOnly.xml"></suite-file>
+        <suite-file path="WUReadOnly.xml"></suite-file>
+        <suite-file path="MDReadOnly.xml"></suite-file>
+
+    </suite-files>
+
+
+
+</suite>

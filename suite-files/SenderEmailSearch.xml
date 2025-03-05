@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_Smoke_Test" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.SenderEmailSearchFocus">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.SenderEmailSearchProducerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.SenderEmailSearchConsumerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test3" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.SenderEmailSearchMortgageTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test4" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.SenderEmailSearchProviderTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test5" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.MultipleSenderEmailSearchFocus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.MultipleSenderEmailSearchOnProducerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.MultipleSenderEmailSearchOnConsumerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.MultipleSenderEmailSearchOnMortgageBrokerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.MultipleSenderEmailSearchOnProviderTab"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_Smoke_Test" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.clear_search.ClearSearchOnFocusTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.clear_search.ClearSearchOnProducerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.clear_search.ClearSearchOnConsumerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test3" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.clear_search.ClearSearchOnMortgageBroker">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test4" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.clear_search.ClearSearchOnProviderTab">
+            </class>
+        </classes>
+    </test>
+</suite>

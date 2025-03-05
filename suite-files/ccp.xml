@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+
+    <test name="CCP Tickets" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="ankit.chauhan@nmgtechnologies.com"/>
+        <parameter name="password" value="123456@"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.ccp.ccp_504"/>
+            <class name="com.competi.scan.test.tests.ccp.ccp_517"/>
+            <class name="com.competi.scan.test.tests.ccp.ccp_531"/>
+            <class name="com.competi.scan.test.tests.ccp.ccp_541"/>
+            <class name="com.competi.scan.test.tests.ccp.ccp_542"/>
+
+
+        </classes>
+    </test>
+
+</suite>

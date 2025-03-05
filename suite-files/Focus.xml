@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Focus Search" configfailurepolicy="continue" parallel="instances" thread-count="1" group-by-instances="true">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+
+    <suite-files>
+        <suite-file path="IdSearch.xml"></suite-file>
+        <suite-file path="SubjectSearch.xml"></suite-file>
+        <suite-file path="SenderNameSearch.xml"></suite-file>
+        <suite-file path="SenderEmailSearch.xml"></suite-file>
+        <suite-file path="BodySearch.xml"></suite-file>
+        <suite-file path="SubjectWithBody.xml"></suite-file>
+        <suite-file path="DefaultSearch.xml"></suite-file>
+        <suite-file path="ClearSearch.xml"></suite-file>
+        <suite-file path="EmailDetails.xml"></suite-file>
+        <suite-file path="FocusTest.xml"></suite-file>
+        <suite-file path="CopyOption.xml"></suite-file>
+    </suite-files>
+
+
+
+</suite>

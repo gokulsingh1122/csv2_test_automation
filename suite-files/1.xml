@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="4">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.EndToEnd.ElectronicContent" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="rashmi.choudhury@nmgtechnologies.com"/>
+        <parameter name="password" value="123456"></parameter>
+        <classes>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest010"/>
+
+
+
+        </classes>
+    </test>
+</suite>

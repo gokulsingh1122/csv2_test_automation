@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.EndToEnd.ElectronicContent" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--below test is tested-->
+            <class name="com.competi.scan.test.tests.end_to_end.electronic_content.ECManualProduct"/>
+
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.electronic_content.ECManualProductAllFields"/>-->
+            <!--<class name="com.competi.scan.test.tests.end_to_end.electronic_content.ECNonManualProduct"/>-->
+            <!--<class name="com.competi.scan.test.tests.end_to_end.electronic_content.ECNonManualAllFields"/>-->
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.DirectMail" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--Below test is tested-->
+            <class name="com.competi.scan.test.tests.end_to_end.direct_mail.EndToEndDirectMailManual"/>
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.direct_mail.EndToEndDirectMailManualAllFields"/>-->
+            <!--<class name="com.competi.scan.test.tests.end_to_end.direct_mail.EndToEndDirectMail"/>-->
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.SocialMedia" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--Below test is tested-->
+            <class name="com.competi.scan.test.tests.end_to_end.social_media.SocialMediaManualProduct"/>
+
+
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.social_media.SocialMediaManualProductAllFields"/>-->
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.PrintMedia" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--Below test is tested -->
+            <class name="com.competi.scan.test.tests.end_to_end.print_media.PrintMediaManualProduct"/>
+
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.print_media.PrintMediaManualProductAllFields"/>-->
+
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.WebsiteUrl" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!-- below test is tested -->
+            <class name="com.competi.scan.test.tests.end_to_end.website_url.WebsiteUrlManualProduct"/>
+
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.website_url.WebsiteUrlManualProductAllFields"/>-->
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.MobileDigital" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--Below test is tested-->
+            <class name="com.competi.scan.test.tests.end_to_end.mobile_digital.OnlineDisplayManualProduct"/>
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.mobile_digital.OnlineDisplayManualProductAllFields"/>-->
+
+
+            <!--<class name="com.competi.scan.test.tests.end_to_end.mobile_digital.OnlineDisplayPrefilterProductAllFields"/>-->
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.MobileDigital-1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+           <!-- <class name="com.competi.scan.test.tests.end_to_end.mobile_digital.SearchEngineMarketingPrefilterProductAllFields"/>
+            <class name="com.competi.scan.test.tests.end_to_end.mobile_digital.OnlineVideoPrefilterProductAllFields"/>-->
+        </classes>
+    </test>
+    <test name="Tests.EndToEnd.VAT" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!-- <class name="com.competi.scan.test.tests.end_to_end.electronic_content.VATEndToEnd"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.EndToEnd.RBAC" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+           <class name="com.competi.scan.test.tests.end_to_end.RBAC"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="classes" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_Smoke_Test">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeOne"/>
+
+            <!--<class name="com.competi.scan.test.tests.admin_site.search_managment.companies.CompaniesSearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.affinity_associations.AffinitySearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.publications.PublicationsSearchMngmnt"/>
+            <class name="com.competi.scan.test.tests.admin_site.search_managment.media_channels.MediaChannelsSearchMngmnt"/>-->
+
+
+
+            <!--SEARCH TESTS-->
+            <!--<class name="com.competi.scan.test.tests.manage_user.search_record.SearchByUserName01"/>
+            <class name="com.competi.scan.test.tests.manage_user.search_record.SearchByEmail01"/>
+            <class name="com.competi.scan.test.tests.manage_user.search_record.SearchByStatus01"/>
+            <class name="com.competi.scan.test.tests.manage_user.search_record.ResetSearchFilter01"/>-->
+
+        </classes>
+    </test>
+</suite>

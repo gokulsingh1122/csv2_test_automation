@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="2">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.AdminSite.MobileDigital.BulkUpdate.Unpublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--tested-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.CreateMultipleTestProductMD"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateSingleRecord"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateMultipleCompanies"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateMultipleSector"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateAddDuplicateCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateAddDuplicateSector"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateOnlySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.BulkUpdateMultipleRecords"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.bulk_update.DeleteMDMultipleProduct"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.MobileDigital.statusChange.Published" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.status_change.StatusToUnapproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.published.status_change.StatusToProblem"/>--><!--Product-mapping-data Bug-->
+        </classes>
+    </test>
+
+
+    <test name="Tests.AdminSite.MobileDigital.statusChange.Unpublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.status_change.AddManualProduct"/>-->
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.status_change.StatusChangeMD"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.status_change.StatusToApproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.unpublished.status_change.DeleteSingleProduct"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.MobileDigital.StatusChange.PrefilterProduct" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.status_change.CreateProductByOnlineDisplay"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.status_change.CreateProductByOnlineVideo"/>
+            <class name="com.competi.scan.test.tests.admin_site.mobile_digital.prefilter_product.status_change.CreateProductBySearchEngineMarketing"/>-->
+        </classes>
+    </test>
+</suite>

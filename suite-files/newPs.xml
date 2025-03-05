@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NewPs" configfailurepolicy="continue" parallel="tests" thread-count="4">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+
+    <!--<test name="Tests.NewPowerSearch.OCR" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.new_power_search.ocr.PdfTextDoubleQuotes"/>
+        </classes>
+    </test>-->
+
+    <test name="Tests.NewPowerSearch.EntryId" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.new_power_search.entryId.EntryIdDoubleQuotes"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.entryId.EntryIdSingleQuotes"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.entryId.EntryIdWithoutQuotes"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.NewPowerSearch.ProductHeadline" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.new_power_search.product_headline.ProductHeadlineAndCondition"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.product_headline.ProductHeadlineOrCondition"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.product_headline.ProductHeadlineWithoutQuotes"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.product_headline.ProductHeadlineSingleQuotes"/>
+            <class name="com.competi.scan.test.tests.new_power_search.product_headline.ProductHeadlineDoubleQuotes"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.NewPowerSearch.MediaChannel" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <!--<class name="com.competi.scan.test.tests.new_power_search.media_channel.SingleMediaChannel"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.media_channel.MultipleMediaChannel"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.NewPowerSearch.Sector" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <!--<class name="com.competi.scan.test.tests.new_power_search.sector.SingleSector"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.sector.MultipleSector"/>-->
+            <!-- Only and Exact test case  -->
+        </classes>
+    </test>
+
+    <test name="Tests.NewPowerSearch.Audience" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+           <!-- <class name="com.competi.scan.test.tests.new_power_search.audience.SingleAudience"/>-->
+
+        </classes>
+    </test>
+    <test name="Tests.NewPowerSearch.Rx" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <!--<class name="com.competi.scan.test.tests.new_power_search.rx.SearchByRx"/>-->
+
+        </classes>
+    </test>
+    <test name="Tests.NewPowerSearch.Affinion" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <!--<class name="com.competi.scan.test.tests.new_power_search.affinion.SearchByAffinion"/>-->
+
+        </classes>
+    </test>
+    <test name="Tests.NewPowerSearch.CDHP" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <!--<class name="com.competi.scan.test.tests.new_power_search.cdhp.SearchByCdhp"/>-->
+
+        </classes>
+    </test>
+
+    <test name="Tests.NewPowerSearch.PreScreenOptOut" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.new_power_search.pre_screen_opt_out.PreScreenOptOut"/>-->
+            <!--<class name="com.competi.scan.test.tests.new_power_search.pre_screen_opt_out.NonPreScreenOptOut"/>-->
+        </classes>
+    </test>
+    <test name="Tests.NewPowerSearch.RetailCardStudy" preserve-order="true"> <!--is_Citi - decomissioned from add product form -->
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.new_power_search.pre_screen_opt_out.PreScreenOptOut"/>-->
+
+        </classes>
+    </test>
+    <test name="Tests.NewPowerSearch.CreditCardMentioned" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.new_power_search.credit_card_mentioned.CreditCardMentioned"/>-->
+        </classes>
+    </test>
+    <test name="Tests.NewPowerSearch.TargetMarket" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.new_power_search.credit_card_mentioned.CreditCardMentioned"/>-->
+        </classes>
+    </test>
+</suite>

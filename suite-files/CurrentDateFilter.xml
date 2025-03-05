@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_Smoke_Test1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateAllTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateProducerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test3" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateConsumerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test4" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateMortgageBrokerTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test5" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateProviderTab">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests.Competiscan_Smoke_Test6" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.CurrentDateEmailEGlacier">
+            </class>
+        </classes>
+    </test>
+</suite>

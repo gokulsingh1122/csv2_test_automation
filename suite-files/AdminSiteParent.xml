@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Admin Site" configfailurepolicy="continue" parallel="instances" thread-count="2" group-by-instances="true">
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <suite-files>
+        <suite-file path="AdminSiteReadOnly.xml"></suite-file>
+        <suite-file path="AdminSiteUpdateOnly.xml"></suite-file>
+    </suite-files>
+
+
+
+</suite>

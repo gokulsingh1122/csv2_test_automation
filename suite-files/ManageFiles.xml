@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_ManageFiles_Test" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.manage_files.UploadPngImage"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.manage_files.UploadJpegImage"/>
+            <class name="com.competi.scan.test.tests.admin_site.manage_files.UploadJpgImage"/>
+            <class name="com.competi.scan.test.tests.admin_site.manage_files.UploadTxtFile"/>
+            <class name="com.competi.scan.test.tests.admin_site.manage_files.UploadXlsxFile"/>
+            <class name="com.competi.scan.test.tests.admin_site.manage_files.UploadPdfFile"/>-->
+
+        </classes>
+    </test>
+</suite>

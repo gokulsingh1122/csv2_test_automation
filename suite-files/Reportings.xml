@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+
+    <test name="Tests.AdminSite.Reportings" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <!--<class name="com.competi.scan.test.tests.admin_site.reportings.DirectMailDuplicate"/>
+            <class name="com.competi.scan.test.tests.admin_site.reportings.PixelReport"/>
+            <class name="com.competi.scan.test.tests.admin_site.reportings.DailyStatusReport"/>
+            <class name="com.competi.scan.test.tests.admin_site.reportings.ConsumerScoringReport"/>-->
+            <class name="com.competi.scan.test.tests.admin_site.reportings.MortgageBroker"/>
+            <class name="com.competi.scan.test.tests.admin_site.reportings.ProviderScore"/>
+            <class name="com.competi.scan.test.tests.admin_site.reportings.ProducerScore"/>
+
+        </classes>
+    </test>
+
+</suite>

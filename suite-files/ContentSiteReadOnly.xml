@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <!--under test-->
+    <!--under test-->
+
+    <test name="Tests.ContentSite.IDSearch" preserve-order="true">
+
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.id_search.IdSearchOnFocusTab"/>
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.MultipleIDSearch" preserve-order="true">
+
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.id_search.MultipleIDSearchOnFocusTab"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.SubjectSearch" preserve-order="true">
+
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_search.SubjectSearchOnFocusTab"/>
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.SubjectComplexSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_search.SubjectSearchTextWithoutQuotesOnFocusTab"/>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_search.SubjectSearchWithPartialTextOnFocusTab"/>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_search.SubjectSearchWithSingleQuotesOnFocusTab"/>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_search.SubjectSearchWithOrConditionsFocus"/>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_search.SubjectSearchWithAndConditionsOnFocusTab"/>
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.BodySearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.body_search.BodySearchFocusTab"/>
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.SubjectWithBodySearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.subject_body_search.SubjectWithBodySearchFocus"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.SenderNameSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_name_search.SenderNameSearchFocus"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.MultipleSenderNameSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_name_search.MultipleSenderNameSearchFocus"/>
+         </classes>
+    </test>
+    <test name="Tests.ContentSite.MultipleSenderEmailSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.MultipleSenderEmailSearchFocus"/>
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.SenderEmailSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.sender_email_search.SenderEmailSearchFocus"/>
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.ClearSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.clear_search.ClearSearchOnFocusTab"/>
+
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.DefaultSearch" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.default_search.DefaultSearchFocusTab"/>
+        </classes>
+    </test>
+
+    <!--Update Part-->
+    <!--<test name="Tests.ContentSite.CopySubjectLink" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.copy_option.CopySubjectLinkWithSingleEmailOnFocusDashboard"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.copy_option.CopySubjectLinkWithMultipleEmailOnFocusDashboard"/>
+        </classes>
+    </test>-->
+
+    <!--Update Part-->
+    <!--<test name="Tests.ContentSite.AssignCopies" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.AssignCopies"/>
+        </classes>
+    </test>-->
+    <!--Update Part-->
+    <!--<test name="Tests.ContentSite.UpdateRecordFromFocus" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.BulkUpdateRecordFromFocus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusFlagPointMarkOnProducerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusBySelectAllCheckBoxFocus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateFlag"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdatePoint"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateMarkOnFocusDashboard"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusAndPointsOnEmailDetails"/>
+        </classes>
+    </test>-->
+
+    <test name="Tests.ContentSite.PaginationAndSorting" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.pagination.Pagination"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.sorting.Sorting"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.PanellistTabAndRecordValidation" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.content_site.search_page.PanellistTabAndRecordValidation"/>--><!--Commented as it fails on prod-->
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.FilterOptions" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.FilterOptions"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.GoBackLink" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.GoBackLink"/>
+        </classes>
+    </test>
+
+    <!--Update Part-->
+    <!--<test name="Tests.ContentSite.EmailDetail" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.email_detail_page.EmailDetail"/>
+            <class name="com.competi.scan.test.tests.content_site.email_detail_page.RemoveLink"/>
+        </classes>
+    </test>-->
+
+    <test name="Tests.ContentSite.Eglacier" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.id_search.EGlacierIdSearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.subject_search.EGlacierSubjectSearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.id_search.EGlacierMultipleIdSearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.body_search.EGlacierBodySearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.sender_name_search.EGlacierSenderNameSearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.sender_email_search.EGlacierSenderEmailSearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.subject_body_search.EGlacierSubjectWithBodySearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.FocusDashboardToEGlacier"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.default_search.EGlacierDefaultSearch"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.clear_search.EGlacierClearSearch"/>
+
+
+
+
+
+
+
+            <!--Update Part-->
+            <!--<class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.MoveToEGlacierAndBackToFocus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.MoveFromFocusToEGlacierMultipleRecords"/>-->
+
+        </classes>
+    </test>
+
+
+    <!--<test name="Tests.ContentSite.CurrentDate" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateAllTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateProducerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateConsumerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateMortgageBrokerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.search.current_date.CurrentDateProviderTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.CurrentDateEmailEGlacier"/>
+        </classes>
+    </test>-->
+</suite>

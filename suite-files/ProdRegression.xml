@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ProdRegression" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+
+
+    <suite-files>
+         <suite-file path="ContentSiteReadOnly.xml"></suite-file>
+         <suite-file path="ContentSiteUpdate.xml"></suite-file>
+         <suite-file path="EndToEnd.xml"></suite-file>
+    </suite-files>
+
+
+
+
+
+
+</suite>

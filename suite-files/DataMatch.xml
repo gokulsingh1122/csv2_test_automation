@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.DataMatch.Csv1VsCsv2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorWithCategory"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.MultipleSectorAny"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.MultipleSectorExact"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.MultipleSectorOnly"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorCatSubCatAndSubSubCatWithPrimaryCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorCatSubCatWithPrimaryCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorCatWithPrimaryCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorWithApplicationType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorWithCatAndSubCatAndSubSubCategory"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorWithCategoryAndSubCategory"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SectorWithReloadableCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.sector.SingleSector"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ocr.PdfTextDoubleQuotes"/>
+            <!--<class name="com.competi.scan.test.tests.data_match_job.power_search.ocr.PdfTextSingleQuotes"/>-->
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ocr.PdfTextWithAnd"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ocr.PdfTextWithNot"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ocr.PdfTextWithOr"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ocr.PdfTextWithoutQuotes"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.entry_id.EntryIdDoubleQuotes"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.entry_id.EntryIdSingleQuotes"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.entry_id.EntryIdWithoutQuotes"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.media_channel.SingleMediaChannel"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.media_channel.MultipleMediaChannel"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.audience.SingleAudience"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.audience.MultipleAudience"/>
+        </classes>
+    </test>
+    <test name="Tests.DataMatch.OCR" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.product_headline.ProductHeadlineDoubleQuotes"/>
+            <!--<class name="com.competi.scan.test.tests.data_match_job.power_search.product_headline.ProductHeadlineSingleQuotes"/>-->
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.product_headline.ProductHeadlineWithAnd"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.product_headline.ProductHeadlineWithOr"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.product_headline.ProductHeadlineAndOcr"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.product_headline.ProductHeadlineOrOcr"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.LastOneWeekRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.LastTwoWeekRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.LastOneMonthRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.LastThreeMonthRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.LastSixMonthRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.LastOneYearRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.OneMonthRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.added_to_database.TwoMonthRecords"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.approved_date.ApprovedDateOneWeek"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.approved_date.ApprovedDateWithTime"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_id.SinglePanelistId"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_id.MultiplePanelistId"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_id.PrimaryPanelist"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_id.NonPrimaryPanelist"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.country.Canada"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.country.UnitedStates"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.affinityOrAssociation.AffinityName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.affinityOrAssociation.MultipleAffinityName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.affinityOrAssociation.AffinityWithRelatedCheckBox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.company.CompanyName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.company.MultipleCompanyName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.company.CompanyWithRelatedCheckBox"/>
+        </classes>
+    </test>
+    <test name="Tests.DataMatch.Product.AddedToDatabase" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.introductory_pricing.IntroductoryPricing"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.issue_type.IssueType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.mailing_type.MailingType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.mailing_type.MultipleMailingType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.mailing_type.ExcludeMailingType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.personalization.Personalized"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.personalization.NonPersonalized"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.business_content.BusinessContent"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.business_content.MultipleBusinessContent"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.dma.SingleDma"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.dma.MultipleDma"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.state_province.SingleState"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.state_province.MultipleState"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.edc_ldc_tdsp.SingleEDCLDCTDSP"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.edc_ldc_tdsp.MultipleEDCLDCTDSP"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_age.SinglePanelistAge"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_age.MultiplePanelistAge"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_income.PanelistIncome"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_income.MultiplePanelistIncome"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_income.IncomeProducingAsset"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.panelist_income.MultipleIncomeProducingAsset"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.value_score.SingleValueScore"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.value_score.MultipleValueScore"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.fico_score.SingleFICOScore"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.fico_score.MultipleFICOScore"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.credit_vision.CreditVision"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.credit_vision.MultipleCreditVision"/>
+        </classes>
+    </test>
+    <test name="Tests.DataMatch.Product.State_Province" preserve-order="true">
+    <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.vantage_score.VantageScore"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.vantage_score.MultipleVantageScore"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.worksite_voluntary.WorksiteVoluntary"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.worksite_voluntary.NonWorksiteVoluntary"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.credit_union.CreditUnion"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.credit_union.NonCreditUnion"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.affinity_association.AffinityAssociation"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.affinity_association.NonAffinityAssociation"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.rewards.Rewards"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.rewards.RewardsProgramEmphasisSingle"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.rewards.RewardsProgramEmphasisMultiple"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.incentive.Incentive"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.rx.RxCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.affinion.Affinion"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.cdhp_hdhp_hsa.CdhpHdhpHsa"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.pre_screen_opt_out.PreScreenOptOut"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.pre_screen_opt_out.NonPreScreenOptOut"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.retail_card_study.RetailCardStudy"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.retail_card_study.NonRetailCardStudy"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.credit_card_mentioned.CreditCardMentioned"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.target_markets.SingleTargetMarkets"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.target_markets.TargetMarketsCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.target_markets.MultipleTargetMarkets"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.fee_product.FeeProduct"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.fee_product.AncillaryServiceNoFee"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.faux_check.FauxCheck"/>
+        </classes>
+    </test>
+    <test name="Tests.DataMatch.WorksiteVoluntary" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ancillary_products.SingleAncillaryProducts"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.ancillary_products.MultipleAncillaryProducts"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.refinance.Refinance"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.refinance.NonRefinance"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.jumbo_non_conforming.JumboNonConforming"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.va.VaCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.fha.FhaCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.conventional.Conventional"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.usda.UsdaCheckbox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.correspondent_lending.CorrespondentLending"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.min_max_loan_amount.MinMaxLoanAmount"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.communication_type.SingleCommunicationType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.communication_type.MultipleCommunicationType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.communication_type.NotCommunicationType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.delivery_method.SingleDeliveryMethod"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.delivery_method.MultipleDeliveryMethod"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.delivery_type.SingleDeliveryType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.delivery_type.MultipleDeliveryType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.postage.SinglePostage"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.postage.MultiplePostage"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.pre_sorted.SinglePreSorted"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.pre_sorted.MultiplePreSorted"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.package_type.SinglePackageType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.package_type.MultiplePackageType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.electronic_type.SingleElectronicType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.electronic_type.MultipleElectronicType"/>
+        </classes>
+    </test>
+    <test name="Tests.DataMatch.Product.Headline" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.publication_type.SinglePublicationType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.publication_type.MultiplePublicationType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.publication_name.SinglePublicationName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.publication_name.MultiplePublicationName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.group_size.SingleGroupSize"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.group_size.MultipleGroupSize"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.offer_origin.OfferOrigin"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.campaign_language.CampaignLanguage"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.energy_rate_type.SingleEnergyRateType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.energy_rate_type.MultipleEnergyRateType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.offer_price.SingleOfferPrice"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.offer_price.MultipleOfferPrice"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.energy_term_length.SingleEnergyTermLength"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.energy_term_length.MultipleEnergyTermLength"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.cancel_fee.CancelFeeCheckBox"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.face_amount.SingleFaceAmount"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.face_amount.MultipleFaceAmount"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.term_length.SingleTermLength"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.term_length.MultipleTermLength"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.response_mechanism.SingleResponseMechanism"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.response_mechanism.MultipleResponseMechanism"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.card_network.SingleCardNetwork"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.card_network.MultipleCardNetwork"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.network_name.NetworkName"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.social_media_ad_type.SocialMediaAdType"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.riders.SingleRiders"/>
+            <class name="com.competi.scan.test.tests.data_match_job.power_search.riders.MultipleRiders"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.AdminSite.DirectMail.Unpublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.FilterByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.FilterByUser"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusFtpToTemp"/>--> <!--   No FTP records   -->
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.DisIntegrateDmTmSource"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.FilterBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.FilterByStatus"/>
+        </classes>
+    </test>
+    <test name="Tests.AdminSite.DirectMail.Unpublished1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByPanelistId"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByDmTmSource"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByProductName"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.search_filter.SearchByProductId"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.DirectMail.Published1" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByProductName"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByPanelistId"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByNotOCRText"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.DirectMail.Published2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.FilterBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByDmTmSource"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.SearchByCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.FilterByUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.FilterByState"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.published.search_filter.MouseHoverPdfIcon"/>--> <!-- Request fails at uat -->
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.DirectMail.Unpublished2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateSingleRecord"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateMultipleRecords"/>--><!--BUG , can not update more than 4 records -->
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateMultipleCompanies"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateMultipleSector"/>-->
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateAddDuplicateCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateAddDuplicateSector"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.DirectMail.FromPublishedAndUnpublishedGrid" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusToApproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusChangeDM"/>--><!-- There are deleted products on unpublished grid -->
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.status_change.StatusToUnapproved"/>
+        </classes>
+    </test>
+
+
+
+    <test name="Tests.AdminSite.DirectMail.Published.Pagination" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.pagination_sorting.PaginationUnpublishedGrid"/>
+           <!-- <class name="com.competi.scan.test.tests.admin_site.direct_mail.pagination_sorting.SortingUnpublishedGrid"/> -->   <!--   BUG no records on status sorting  -->
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.pagination_sorting.PaginationPublishedGrid"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.pagination_sorting.SortingPublishedGrid"/>
+        </classes>
+    </test>
+</suite>

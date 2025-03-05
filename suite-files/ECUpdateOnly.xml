@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="6">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.AdminSite.ElectronicContent.UnPublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.CreateProduct"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.AssignedUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.LastUserLogs"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.DeleteProduct"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.ElectronicContent.ChangeStatus.UnPublished" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done testing -->
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.admin_site.electronic_content.unPublished.ChangeStatus"/>-->
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.Status_Change.StatusChangeEC"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.Status_Change.StatusToApproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.Status_Change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.Status_Change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.Status_Change.DeleteSingleProduct"/>
+        </classes>
+    </test>
+
+</suite>

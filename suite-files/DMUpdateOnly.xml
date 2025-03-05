@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="2">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.AdminSite.DirectMail.Unpublished2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.CreateMultipleTestProductDM"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateSingleRecord"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateMultipleCompanies"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateMultipleSector"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateAddDuplicateCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateAddDuplicateSector"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.bulk_update.BulkUpdateMultipleRecords"/> <!--BUG , can not update more than 4 records -->
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.DeleteMultipleProduct"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.DirectMail.FromPublishedAndUnpublishedGrid" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusChangeDM"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusToApproved"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.DeleteSingleProduct"/>
+
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusFtpToTemp"/>--> <!--   No FTP records   -->
+            <!--<class name="com.competi.scan.test.tests.admin_site.direct_mail.unpublished.status_change.StatusToProblem"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.status_change.StatusToReprocessed"/>
+            <class name="com.competi.scan.test.tests.admin_site.direct_mail.published.status_change.StatusToUnapproved"/>-->
+        </classes>
+    </test>
+</suite>

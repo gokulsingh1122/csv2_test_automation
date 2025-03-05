@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.DataMatch.Csv1VsCsv2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="manas@nmgtechnologies.com"/>
+        <parameter name="password" value="nmgHQ@123"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_481"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_482"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_483"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_484"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_485"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_486"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_487"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_488"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_489"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_490"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_491"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_492"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_493"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_494"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_495"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_496"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_497"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_498"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_499"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_500"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_501"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_502"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_503"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_504"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_505"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_506"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_507"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_508"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_509"/>
+            <class name="com.competi.scan.test.tests.data_match_job.search_string.TC_510"/>
+        </classes>
+    </test>
+</suite>

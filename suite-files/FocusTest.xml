@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.Competiscan_Smoke_Test" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.search_page.AssignCopies"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.BulkUpdateRecordFromFocus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.pagination.Pagination"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.sorting.Sorting"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.PanellistTabAndRecordValidation"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.FilterOptions"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusFlagPointMarkOnProducerTab"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusBySelectAllCheckBoxFocus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateFlag"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdatePoint"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateMarkOnFocusDashboard"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.GoBackLink"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusAndPointsOnEmailDetails"/>
+        </classes>
+    </test>
+</suite>

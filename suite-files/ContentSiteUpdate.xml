@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <!--under test-->
+    <test name="Tests.ContentSite.CopySubjectLink" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes><!--Can only be tested Locally as the clipboard does not work in container, machine clipboard variable missing -->
+           <!-- <class name="com.competi.scan.test.tests.content_site.search_page.copy_option.CopySubjectLinkWithSingleEmailOnFocusDashboard"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.copy_option.CopySubjectLinkWithMultipleEmailOnFocusDashboard"/>-->
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.AssignCopies" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <!--<class name="com.competi.scan.test.tests.content_site.search_page.AssignCopies"/>-->
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.UpdateRecordFromFocus" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+          <!--  <class name="com.competi.scan.test.tests.content_site.search_page.update_status.BulkUpdateRecordFromFocus"/>-->
+           <!--<class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusFlagPointMarkOnProducerTab"/>-->
+            <!--<class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusBySelectAllCheckBoxFocus"/>-->
+
+
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatus"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateFlag"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdatePoint"/>
+
+
+            <!--<class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateMarkOnFocusDashboard"/>
+            <class name="com.competi.scan.test.tests.content_site.search_page.update_status.UpdateStatusAndPointsOnEmailDetails"/>-->
+        </classes>
+    </test>
+
+    <test name="Tests.ContentSite.EmailDetail" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.email_detail_page.EmailDetail"/>
+            <class name="com.competi.scan.test.tests.content_site.email_detail_page.RemoveLink"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.Eglacier" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+           <class name="com.competi.scan.test.tests.content_site.search_page.e_glacier.MoveToEGlacierAndBackToFocus"/>
+        </classes>
+    </test>
+</suite>

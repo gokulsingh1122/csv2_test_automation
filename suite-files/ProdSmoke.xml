@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ProdSmoke" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.Prod.SmokeTest" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="user" value="ankit.chauhan@nmgtechnologies.com"/>
+        <parameter name="password" value="123456@"/>
+        <classes>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest01"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest02"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest03"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest04"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest05"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest06"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest07"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest08"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest09"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest010"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest011"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest012"/>
+            <class name="com.competi.scan.test.tests.smoke_competiscan.SmokeTest013"/>
+        </classes>
+    </test>
+
+</suite>

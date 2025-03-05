@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+
+    <test name="Tests.ContentSite.UpdateRecordFromFocus" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <classes>
+
+            <class name="com.competi.scan.test.tests.admin_site.electronic_content.published.vat.VerifyAnalysis"/>
+
+
+        </classes>
+    </test>
+
+</suite>

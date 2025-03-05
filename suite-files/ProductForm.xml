@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="classes" thread-count="1">
+
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Tests.ContentSite.ProductForm" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="testtag" value="1"></parameter>
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.product_form.smokeTest"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyPreLoadedData"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyPanelistSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyCompanySection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyAffinitySection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyMediaChannelSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyAudienceSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifySectorSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyOfferOrigin"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyProductNameSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyProductHeadlineSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyProductGeneralSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyAncillaryProducts"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyResponseMechanismSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyBusinessContent"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyMailingType"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyCampaignLanguage"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyTargetMarketSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.verifyStateProvinceSection"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.tc021"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.deleteMUIDFromAdminPortal"/>
+        </classes>
+    </test>
+    <test name="Tests.ContentSite.ProductForm.Banking_Sector" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="testtag" value="2"></parameter>
+
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.product_form.smokeTest"/>
+        <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.banking_sector.tc031"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.banking_sector.verifyBankingDependentFields"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.banking_sector.tc033"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.automative_sector.verifyAutomotiveDependentFields"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc035"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.verifyProductNameLookup"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc037"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc038"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc039"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc040"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc041"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.verifyPaymentCard_RegularPricing"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc043"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc044"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.creditcard_sector.tc045"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.energy_sector.tc046"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.energy_sector.tc047"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.energy_sector.tc048"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.hr_sector.tc049"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.hr_sector.tc050"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.deleteMUIDFromAdminPortal"/>
+        </classes>
+
+    </test>
+
+
+    <test name="Tests.ContentSite.ProductForm.Energy_Sector" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <parameter name="testtag" value="3"></parameter>
+
+        <classes>
+            <class name="com.competi.scan.test.tests.content_site.product_form.smokeTest"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.Insurance_sector.tc051"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.Insurance_sector.tc052"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.investment_sector.tc053"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.investment_sector.tc054"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.mortgage_sector.tc055"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.mortgage_sector.tc056"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.mortgage_sector.tc057"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.mortgage_sector.tc058"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.mortgage_sector.tc059"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.real_esatate_sector.tc060"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc061"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc062"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc063"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc064"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc065"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc076"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.retail_sector.tc077"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.shipping_sector.tc066"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.shipping_sector.tc067"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.telecom_sector.tc068"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.telecom_sector.tc069"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.telecom_sector.tc070"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.telecom_sector.tc071"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.telecom_sector.tc072"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.travel_sector.tc073"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.travel_sector.tc074"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.sector_tc.travel_sector.tc075"/>
+            <class name="com.competi.scan.test.tests.content_site.product_form.deleteMUIDFromAdminPortal"/>
+        </classes>
+
+    </test>
+
+</suite>

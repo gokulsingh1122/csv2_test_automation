@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestCS" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+
+    <listeners>
+        <listener class-name="com.competi.scan.test.listeners.TestListener"/>
+        <listener class-name="com.competi.scan.test.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Tests.AdminSite.PrintMedia.UnPublished.SearchFilter" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done Testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.FilterBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.FilterByStatus"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchByProductName"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchByCompany"/>
+        </classes>
+    </test>
+    <test name="Tests.AdminSite.PrintMedia.UnPublished.SearchFilter2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done testing-->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.FilterByUser"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.FilterByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchByOCRNotText"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchBySourceId"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.SearchProductByCountry"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.unPublished.search_filter.HideAndShowAdvanceFilter"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.PrintMedia.Published.SearchFilter" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!-- Done Testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.FilterBySector"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchByProductId"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchByEntryId"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchByProductName"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchByCompany"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.FilterByUser"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.PrintMedia.Published.SearchFilter2" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!-- Done Testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.FilterByState"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchByNotOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchByOCRText"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchBySourceId"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.SearchProductByCountry"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.HideAndShowAdvanceFilter"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.published.search_filter.MouseHoverPdfIcon"/>
+        </classes>
+    </test>
+
+    <test name="Tests.AdminSite.PrintMedia.UnPublished.PaginationAndSorting" preserve-order="true">
+        <parameter name="incognito" value="true"/>
+        <!--Done Testing -->
+        <classes>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.pagination_sorting.PaginationPublishedGrid"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.pagination_sorting.PaginationUnpublishedGrid"/>
+            <class name="com.competi.scan.test.tests.admin_site.print_media.pagination_sorting.SortingPublishedGrid"/>
+            <!--<class name="com.competi.scan.test.tests.admin_site.print_media.pagination_sorting.SortingUnpublishedGrid"/>--> <!-- Sorting is not working -->
+        </classes>
+    </test>
+</suite>
